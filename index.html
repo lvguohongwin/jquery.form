@@ -13,6 +13,11 @@
         <script src="./js/jquery.form.min.js" type="text/javascript"></script>
         <!-- init -->
         <script type="text/javascript">
+            $(document).ready(function(){	
+                $('#form').form({
+                    phpLocation: 'php/post.php'
+                });
+            });
         </script>
         <style type="text/css">
             .loading {
@@ -20,7 +25,7 @@
                 height: 32px;
                 background: transparent url('image/loading.gif') center center no-repeat;
             }
-            form {
+            #form {
                 width: 800px;
                 margin: 100px auto;
             }
@@ -39,27 +44,29 @@
         </style>
     </head>
     <body>
-        <form action="" method="post">
-            <table>
-                <tr>
-                    <td style="width: 300px;">Imię:</td>
-                    <td>Wiadomość<span>*</span>:</td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="name" /></td>
-                    <td rowspan="3"><textarea name="message" class="required"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Adres e-mail<span>*</span>:</td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="mail" class="required" /></td>
-                </tr>
-                <tr>
-                    <td><span>*</span> - <span class="adnotation">pola wymagane</span></td>
-                    <td><input type="submit" value="Wyślij wiadomość" onclick="return false;" /></td>
-                </tr>
-            </table>
-        </form>
+        <div id="form">
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td style="width: 300px;">Imię:</td>
+                        <td>Wiadomość<span>*</span>:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name" /></td>
+                        <td rowspan="3"><textarea name="message" class="required"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Adres e-mail<span>*</span>:</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="mail" class="required" /></td>
+                    </tr>
+                    <tr>
+                        <td><span>*</span> - <span class="adnotation">pola wymagane</span></td>
+                        <td><input type="submit" value="Wyślij wiadomość" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </body>
 </html>
