@@ -29,3 +29,11 @@ final class json {
 
 }
 
+/**
+ * Klasa odpowiedzialna za wysłanie formularza i zwrócenie komunikatu
+ */
+final class parseMail {
+    
+}
+
+new parseMail;
