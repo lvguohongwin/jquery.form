@@ -65,7 +65,7 @@ final class parseMail {
             $this->json = array(
                 'header' => 'Proszę uzupełnić wymagane pola.',
                 'success' => 'fail',
-                'msg' => '<p><b>W formularzu  pola</b>: ' . (implode(', ', $this->incorrect)) . ' są wymagane, prosimy o ich uzupełnienie.</p><p>Czy chcesz <span class="reset-button">spróbować jeszcze raz?</span></p>'
+                'msg' => '<p><b>Pola</b>: ' . (implode(', ', $this->incorrect)) . ' są wymagane.</p><p>Czy chcesz <span class="reset-button">spróbować jeszcze raz?</span></p>'
             );
         }
         New json($this->json);
