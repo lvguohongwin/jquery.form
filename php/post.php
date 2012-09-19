@@ -56,9 +56,9 @@ final class parseMail {
 
             if (mail('kontakt@smefju.pl', 'Wiadomośc z strony internetowej', $message, $headers)) {
                 $this->json = array(
-                    'notice' => 'Wiadomość została wysłana.',
+                    'header' => 'Wiadomość została wysłana.',
                     'success' => 'pass',
-                    'option' => '<p>Dziękujemy za skorzystanie z formularza, Twoja wiadomość została wysłana.</p>'
+                    'msg' => '<p>Dziękujemy za skorzystanie z formularza, Twoja wiadomość została wysłana.</p>'
                 );
             }
         } else {
