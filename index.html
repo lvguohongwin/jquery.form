@@ -18,5 +18,27 @@
         </style>
     </head>
     <body>
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td style="width: 300px;">Imię:</td>
+                    <td>Wiadomość<span>*</span>:</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="name" /></td>
+                    <td rowspan="3"><textarea name="message" class="required"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Adres e-mail<span>*</span>:</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="mail" class="required" /></td>
+                </tr>
+                <tr>
+                    <td><span>*</span> - <span class="adnotation">pola wymagane</span></td>
+                    <td><input type="submit" value="Wyślij wiadomość" onclick="return false;" /></td>
+                </tr>
+            </table>
+        </form>
     </body>
 </html>
