@@ -62,20 +62,11 @@ final class parseMail {
                 );
             }
         } else {
-            $this->incorrect = implode(', ', $this->incorrect);
-            if (isset($_POST['homeForm']) && $_POST['homeForm'] == 'true') {
-                $this->json = array(
-                    'header' => 'Proszę uzupełnić wymagane pola.',
-                    'success' => 'fail',
-                    'msg' => '<p><strong>W formularzu  pola</strong>: ' . $this->incorrect . ' są wymagane, prosimy o ich uzupełnienie.<p><strong>Czy chcesz <span onclick="resetForm();">spróbować jeszcze raz?</span></strong></p></p>'
-                );
-            } else {
-                $this->json = array(
-                    'header' => 'Proszę uzupełnić wymagane pola.',
-                    'success' => 'fail',
-                    'msg' => '<p><strong>W formularzu  pola</strong>: ' . $this->incorrect . ' są wymagane, prosimy o ich uzupełnienie.<p><strong>Czy chcesz <span onclick="resetForm();">spróbować jeszcze raz?</span></strong></p></p>'
-                );
-            }
+            $this->json = array(
+                'header' => 'Proszę uzupełnić wymagane pola.',
+                'success' => 'fail',
+                'msg' => '<p><b>W formularzu  pola</b>: ' . (implode(', ', $this->incorrect)) . ' są wymagane, prosimy o ich uzupełnienie.</p><p><b>Czy chcesz <span onclick="resetForm();">spróbować jeszcze raz?</span></b></p>'
+            );
         }
         New json($this->json);
     }
